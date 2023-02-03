@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap');
+
+:root {
+    --deep-green: #605828;
+    --orange: #f9a115;
+    --blush: #fcc5ac;
+    --charcoal: #1e1d1d;
+    --blue: #a9ccff;
+}
+html {
+    background-color: #e7d8c0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: none;
+    max-width: 100%;
+    font-family: 'Mansalva', cursive;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+    
+    
+}
+
+h1 {
+    position: fixed;
+    top: 6.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--deep-green);
+    font-weight: bold;
+}
+
+.flex-todos {
+    position: fixed;
+    top: 10.3rem;
+}
+
+.the-list {
+    line-height: 3rem;
+    position: relative;
+    align-items: flex-start;
+    color: var(--deep-green);
+    font-size: 1.2rem;
+}
+
+
+.buttons {
+    display: flex;
+    position: fixed;
+    
+    flex-flow: column;
+    position: fixed;
+    margin-top: 40rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.input-and-add {
+    display: flex;
+    align-items: baseline;
+}
+
+.todo-input {
+    font-family: 'Mansalva', cursive;
+    background-color: #fcc5ac;
+    font-size: 1.2rem;
+    border: none;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    transition: background-color 1s linear;
+}
+
+.todo-input:hover {
+    background-color: var(--deep-green);
+    color: var(--blush);
+    border: none;
+    height: 3rem;
+    
+}
+
+input[type=checkbox] {
+    width: 1.5rem;
+    accent-color: var(--blush);
+  }
+
+.add {
+    
+    vertical-align: baseline;
+    border-radius: 50%;
+    padding: 1rem .7rem;
+    aspect-ratio: 1;
+    border: none;
+    background-color: #a9ccff;
+    color: #405d89;
+    font-family: 'Mansalva', cursive;
+    cursor: pointer;
+
+}
+
+.add:hover {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    
+    background-color: #f9a115;
+    color:#e7d8c0;
+}
+
+.left-and-clear {
+    display: flex;
+}
+
+.left {
+    
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-align: center;
+    background-color: var(--orange);
+    color: var(--deep-green);
+    font-weight: 700;
+    max-width: 4rem;
+    padding: .5rem;
+    padding-bottom: .1rem;
+    transition: background-color .5s ease-in;
+}
+
+.left:hover {
+    background-color: var(--blue);
+    color: var(--deep-green);
+}
+
+.clear {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    border: none;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    background-color: var(--deep-green);
+    color: var(--blush);
+    border-radius: 2rem;
+    max-height: 4rem;
+    transition: background-color .1s ease-in;
+    
+}
+
+.clear:hover {
+    background-color: var(--blush);
+    color: var(--deep-green);
+}
+
+
+.paper {
+    position: fixed;
+    width: 40rem;
+    top: 2rem;
+    z-index: -1;
+}
+
+
+.illustrations {
+    display: flex;
+    justify-content: center;
+    width: 150rem;
+    position: fixed;
+}
+.snail {
+    position: relative;
+    width: 3.4rem;
+    height: 3.8rem;
+    top: -23rem;
+    left: 1rem;
+}
+
+.snail-trail {
+    position: relative;
+    width: 3rem;
+    height: 1rem;
+    top: -20.2rem;
+    left: -6.5rem;
+    z-index: -1;
+}
+
+.leaf {
+    position: relative;
+    max-width: 1rem;
+    max-height: 2rem;
+    top: -22rem;
+    left: 17rem;
+    transform: rotate(20deg);
+}
+
+.flower {
+    position: relative;
+    top: -5rem;
+    left: 15.7rem;
+    width: 2.5rem;
+
+}
+
+.tiny-flower {
+    position: relative;
+    width: .8rem;
+    height: 2rem;
+    top: -7rem;
+    left: -16.8rem;
+
+}
+
+.tiny-flowers {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    top: -20rem;
+    left: -24rem;
+    transform: rotate(5deg);
+}
+
+.sunflower {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 9.4rem;
+    left: -24rem;
+}
+
+.big-leaf {
+    position: relative;
+    width: 4rem;
+    height: 6rem;
+    top: 13rem;
+    left: 6rem;
+}
+
+.tiny-flower2 {
+    position: fixed;
+    width: .7rem;
+    top: 42rem;
+    left: 7rem;
+    transform: rotate(37deg);
+}
+
+.tiny-flowers2 {
+    position: fixed;
+    width: 2rem;
+    top: 11rem;
+    left: 40rem;
+    transform: rotate(-57deg);
+}
+
+
+@media screen and (max-width: 550px) {
+    h1 {
+        top: 11rem;
+        text-align: center;
+    }
+
+    .the-list {
+        top: 4rem;
+        text-align: center;
+    }
+    .paper {
+        position: fixed;
+        width: 32rem;
+        top: 8rem;
+        z-index: -1;
+    }
+    .illustrations {
+        display: flex;
+        justify-content: center;
+        width: 150rem;
+        position: fixed;
+    }
+    .snail {
+        position: relative;
+        width: 3.4rem;
+        height: 3.8rem;
+        top: -17rem;
+        left: 1rem;
+    }
+    
+    .snail-trail {
+        position: relative;
+        width: 3rem;
+        height: 1rem;
+        top: -14.2rem;
+        left: -6.5rem;
+    }
+    
+    .leaf {
+        position: relative;
+        max-width: 1rem;
+        max-height: 2rem;
+        top: -20rem;
+        left: 7rem;
+        transform: rotate(20deg);
+    }
+    
+    .flower {
+        position: relative;
+        top: -5rem;
+        left: 12.7rem;
+        width: 2.5rem;
+
+    }
+    
+    .tiny-flower {
+        position: relative;
+        width: .8rem;
+        height: 2rem;
+        top: -7rem;
+        left: -11.8rem;
+
+    }
+    
+    .tiny-flowers {
+        position: relative;
+        width: 1rem;
+        height: 1rem;
+        top: -17rem;
+        left: 7rem;
+        transform: rotate(-45deg);
+    }
+    
+    .sunflower {
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 5.4rem;
+        left: -14rem;
+    }
+    
+    .big-leaf {
+        position: relative;
+        width: 4rem;
+        height: 6rem;
+        top: 10rem;
+        left: 2rem;
+    }
+    .tiny-flower2 {
+        position: fixed;
+        width: .5rem;
+        top: 39rem;
+        left: 2rem;
+        transform: rotate(37deg);
+    }
+    
+    .tiny-flowers2 {
+        position: fixed;
+        width: 1.4rem;
+        top: 2.5rem;
+        left: 4rem;
+        transform: rotate(-57deg);
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .snail {
+        top: -21rem;
+       
+    }
+    
+    .snail-trail {
+        top: -18.2rem;
+        
+    }
+    .leaf {
+        top: -20rem;
+    }
+    .tiny-flowers2 {
+        position: fixed;
+        width: 1.4rem;
+        top: 12.5rem;
+        left: 64rem;
+        transform: rotate(-57deg);
+    }
+    .tiny-flower2 {
+        position: fixed;
+        width: .7rem;
+        top: 42rem;
+        left: 10rem;
+        transform: rotate(-17deg);
+    }
+}
