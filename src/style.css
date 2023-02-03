@@ -364,6 +364,113 @@ input[type=checkbox] {
     }
 }
 
+@media  screen and (max-width: 420px) {
+    h1 {
+        top: 6rem;
+        text-align: center;
+    }
+
+    .the-list {
+        top: -.8rem;
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        display: flex;
+        position: fixed;
+        
+        flex-flow: column;
+        position: fixed;
+        margin-top: 32rem;
+        margin-bottom: 1rem;
+    }
+
+
+    
+    .paper {
+        position: fixed;
+        width: 32rem;
+        top: 3rem;
+        z-index: -1;
+
+    }
+
+    .big-leaf {
+        top: 11rem;
+        left: 2.3rem;
+    }
+
+    .tiny-flowers2 {
+        left: 1rem;
+        top: 1rem;
+        width: 1rem;
+    }
+
+    .todo-input {
+        font-family: 'Mansalva', cursive;
+        background-color: #fcc5ac;
+        font-size: 1rem;
+        border: none;
+        width: 7rem;
+        height: 2rem;
+        color: white;
+        border-radius: 2rem;
+        margin-right: 1rem;
+        transition: background-color 1s linear;
+    }
+    
+    .add {
+        
+        vertical-align: baseline;
+        border-radius: 50%;
+        padding: .3rem .2rem;
+        font-size: .8rem;
+        aspect-ratio: 1;
+        border: none;
+        background-color: #a9ccff;
+        color: #405d89;
+        font-family: 'Mansalva', cursive;
+        cursor: pointer;
+    
+    }
+    
+    
+    
+    
+    .left {
+        
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-align: center;
+        background-color: var(--orange);
+        color: var(--deep-green);
+        font-weight: 700;
+        font-size: .75rem;
+        width: 2.2rem;
+        padding: .5rem;
+        padding-bottom: .1rem;
+        transition: background-color .5s ease-in;
+    }
+    
+   
+    
+    .clear {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        border: none;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin: .5rem;
+        cursor: pointer;
+        background-color: var(--deep-green);
+        color: var(--blush);
+        border-radius: 2rem;
+        max-height: 4rem;
+        transition: background-color .1s ease-in;
+        
+    }
+}
+
 
 @media screen and (min-width: 900px) {
     .snail {
