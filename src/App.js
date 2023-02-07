@@ -59,28 +59,31 @@ function App() {
       <div className="buttons">
   
         <div className="input-and-add">
-        <input ref={todoNameRef} type="text"className="todo-input" />
+          <input ref={todoNameRef} type="text"className="todo-input" />
       
-        <button onClick={handleAddTodo} className="add">add to-do</button>
+          <button onClick={handleAddTodo} className="add">add to-do</button>
         </div>
         <div className="left-and-clear">
-        <div className="left">{todos.filter(todo => !todo.complete).length} left to-do</div>
-        <button onClick={handleClearTodos} className="clear">clear completed to-dos</button>
+          <div className="left">{todos.filter(todo => !todo.complete).length} left to-do</div>
+          <button onClick={handleClearTodos} className="clear">clear completed to-dos</button>
         </div>
-        </div>
-      <img src={paper} className="paper"/>
-      <div className="illustrations">
-      <img src={snail} className="snail" />
-      <img src={leaf}  className="leaf" />
-      <img src={flower} className="flower" />
-      <img src={snailtrail} className="snail-trail" />
-      <img src={tinyflower} className="tiny-flower" />
-      <img src={tinyflowers} className="tiny-flowers" />
-      <img src={sunflower} className="sunflower" />
-      <img src={bigleaf} className="big-leaf" />
       </div>
-      <img src={tinyflower} className="tiny-flower2" />
-      <img src={tinyflowers} className="tiny-flowers2" />
+      <img src={paper} className="paper"/>
+
+      <div className="illustrations">
+
+        <img src={snail} className="snail" />
+        <img src={leaf}  className="leaf" />
+        <img src={flower} className="flower" />
+        <img src={snailtrail} className="snail-trail" />
+        <img src={tinyflower} className="tiny-flower" />
+        <img src={tinyflowers} className="tiny-flowers" />
+        <img src={sunflower} className="sunflower" />
+        <img src={bigleaf} className="big-leaf" />
+        <img src={tinyflower} className="tiny-flower2" />
+        <img src={tinyflowers} className="tiny-flowers2" />
+      </div>
+
     </body>
   )
 }
