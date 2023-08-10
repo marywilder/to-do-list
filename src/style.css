@@ -24,40 +24,69 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--orange);
+    overflow-y: hidden;
     
     
 }
 
-h1 {
+
+
+
+.pencil-image {
     position: fixed;
-    top: 6.5rem;
+    width: 14rem;
+    height: 22rem;
+    background-image: url(./pencil.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-9.5rem, 15.8rem);
+    z-index: 4;
+}
+
+.list-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50rem;
+    height: 35rem;
+    padding-top: 5.5rem;
+    background-image: url(./paper.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-flow: column nowrap;
+
+}
+
+h1 {
+    
     font-family: 'Cormorant Garamond', serif;
     color: var(--deep-green);
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .flex-todos {
-    position: fixed;
-    top: 10.3rem;
+   
+    z-index: 3;
 }
 
 .the-list {
     line-height: 3rem;
-    position: relative;
-    align-items: flex-start;
     color: var(--deep-green);
     font-size: 1.2rem;
+    
 }
 
 
 .buttons {
     display: flex;
-    position: fixed;
-    
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 2;
     flex-flow: column;
-    position: fixed;
-    margin-top: 40rem;
-    margin-bottom: 3rem;
+    
+    
 }
 
 
@@ -65,25 +94,33 @@ h1 {
 .input-and-add {
     display: flex;
     align-items: baseline;
+    height: 7rem;
+    
 }
 
 .todo-input {
     font-family: 'Mansalva', cursive;
-    background-color: #fcc5ac;
-    font-size: 1.2rem;
+    background-color: rgb(255, 255, 255, .0);
+    background-image: url(./input.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 1rem;
     border: none;
     width: 10rem;
     height: 3rem;
-    color: white;
-    border-radius: 2rem;
+    text-align: center;
+    filter: none;
     margin-right: 1rem;
-    transition: background-color 1s linear;
+    transition: filter 1s linear;
+    color: var(--deep-green);
+    outline: none;
 }
 
 .todo-input:hover {
-    background-color: var(--deep-green);
-    color: var(--blush);
-    border: none;
+    filter:hue-rotate(40deg);
+    text-decoration: none;
+    outline: none;
     height: 3rem;
     
 }
@@ -94,378 +131,112 @@ input[type=checkbox] {
   }
 
 .add {
-    
-    vertical-align: baseline;
-    border-radius: 50%;
+    background-image: url(./add-to-do.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 1rem .7rem;
     aspect-ratio: 1;
     border: none;
-    background-color: #a9ccff;
+    background-color: rgb(169, 204, 255, .0);
     color: #405d89;
     font-family: 'Mansalva', cursive;
+    font-size: .75rem;
     cursor: pointer;
-
+    width: 8rem;
+    height: 3.85rem;
+    filter: contrast(80%);
+    transition: filter .75s linear;
+    
 }
 
 .add:hover {
-    border-radius: 50%;
+    filter: hue-rotate(180deg);
     aspect-ratio: 1;
     
-    background-color: #f9a115;
-    color:#e7d8c0;
+   
 }
 
 .left-and-clear {
     display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .left {
     
-    border-radius: 50%;
+    font-size: .7rem;
     aspect-ratio: 1;
     text-align: center;
-    background-color: var(--orange);
+    align-self: center;
+    background-color: none;
+    background-image: url(./left-to-do.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--deep-green);
     font-weight: 700;
-    max-width: 4rem;
-    padding: .5rem;
-    padding-bottom: .1rem;
-    transition: background-color .5s ease-in;
+    width: 3rem;
+    height: 3rem;
+    padding: 1.5rem;
+    transform: translateY(-2rem);
 }
 
-.left:hover {
-    background-color: var(--blue);
-    color: var(--deep-green);
-}
 
 .clear {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Mansalva', cursive;
+    font-size: .8rem;
     border: none;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
     margin: 1rem;
+    margin-top: 0;
     cursor: pointer;
-    background-color: var(--deep-green);
-    color: var(--blush);
-    border-radius: 2rem;
-    max-height: 4rem;
-    transition: background-color .1s ease-in;
-    
+    background-color: rgb(96, 88, 40, 0);
+    background-image: url(./completed-to-dos.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--deep-green);
+    filter: brightness(90%), saturate(150%);
+    height: 4.75rem;
+    transition: filter .3s ease-in;
+    transform: translateY(-1rem);
 }
 
 .clear:hover {
-    background-color: var(--blush);
-    color: var(--deep-green);
-}
-
-
-.paper {
-    position: fixed;
-    width: 40rem;
-    top: 2rem;
-    z-index: -1;
-}
-
-
-.illustrations {
-    position: absolute;
-    width: 70%;
-    height: 100%;
-    margin: 2rem 2rem;
-    border: 3px solid green;
-    
-}
-.snail {
-    
-    width: 3.4rem;
-    height: 3.8rem;
+    filter:brightness(80%);
     
 }
 
-.snail-trail {
-    width: 3rem;
-    height: 1rem;
-    
-    z-index: -1;
+
+
+
+
+
+
+
+
+@media  only screen and (max-width: 767px) {
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.leaf {
-    
-    max-width: 1rem;
-    max-height: 2rem;
-    
-    transform: rotate(20deg);
+.pencil-image {
+    height: 10rem;
+    transform: translate(-7.1rem, 11.1rem);
 }
-
-.flower {
-   
-    width: 2.5rem;
-
-}
-
-.tiny-flower {
+ 
+.list-section {
+    height: 30rem;
+    width: 32rem;
     
-    width: .8rem;
-    height: 2rem;
-    
-
-}
-
-.tiny-flowers {
-    
-    width: 1rem;
-    height: 1rem;
-    
-    transform: rotate(5deg);
-}
-
-.sunflower {
-    
-    width: 1.5rem;
-    height: 1.5rem;
-    
-}
-
-.big-leaf {
-    
-    width: 4rem;
-    height: 6rem;
-    
-}
-
-.tiny-flower2 {
-    
-    width: .7rem;
-    
-    transform: rotate(37deg);
-}
-
-.tiny-flowers2 {
-    
-    width: 2rem;
-
-    transform: rotate(-57deg);
-}
-
-@media  only screen and (max-width: 500px) {
-   
-h1 {
-    position: fixed;
-    top: 3.2rem;
-    font-size: 1.6rem;
-    text-align: center;
-}
-
-.flex-todos {
-    position: fixed;
-    top: 10.3rem;
-}
-
-.the-list {
-    line-height: 3rem;
-    position: relative;
-    align-items: flex-start;
-    color: var(--deep-green);
-    font-size: 1.2rem;
-}
-
-
-.buttons {
-    display: flex;
-    position: fixed;
-    
-    flex-flow: column;
-    position: fixed;
-    margin-top: 27rem;
-    margin-bottom: 3rem;
 }
 
 
 
-.input-and-add {
-    display: flex;
-    align-items: baseline;
 }
 
-.todo-input {
-    font-family: 'Mansalva', cursive;
-    background-color: #fcc5ac;
-    font-size: 1.2rem;
-    border: none;
-    width: 10rem;
-    height: 3rem;
-    color: white;
-    border-radius: 2rem;
-    margin-right: 1rem;
-    transition: background-color 1s linear;
-}
-
-.todo-input:hover {
-    background-color: var(--deep-green);
-    color: var(--blush);
-    border: none;
-    height: 3rem;
-    
-}
-
-input[type=checkbox] {
-    width: 1.5rem;
-    accent-color: var(--blush);
-  }
-
-.add {
-    
-    vertical-align: baseline;
-    border-radius: 50%;
-    padding: 1rem .7rem;
-    aspect-ratio: 1;
-    border: none;
-    background-color: #a9ccff;
-    color: #405d89;
-    font-family: 'Mansalva', cursive;
-    cursor: pointer;
-
-}
-
-.add:hover {
-    border-radius: 50%;
-    aspect-ratio: 1;
-    
-    background-color: #f9a115;
-    color:#e7d8c0;
-}
-
-.left-and-clear {
-    display: flex;
-}
-
-.left {
-    
-    border-radius: 50%;
-    aspect-ratio: 1;
-    text-align: center;
-    background-color: var(--orange);
-    color: var(--deep-green);
-    font-weight: 700;
-    max-width: 4rem;
-    padding: .5rem;
-    padding-bottom: .1rem;
-    transition: background-color .5s ease-in;
-}
-
-.left:hover {
-    background-color: var(--blue);
-    color: var(--deep-green);
-}
-
-.clear {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    border: none;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin: 1rem;
-    cursor: pointer;
-    background-color: var(--deep-green);
-    color: var(--blush);
-    border-radius: 2rem;
-    max-height: 4rem;
-    transition: background-color .1s ease-in;
-    
-}
-
-.clear:hover {
-    background-color: var(--blush);
-    color: var(--deep-green);
-}
-
-
-.paper {
-    position: fixed;
-    width: 29rem;
-    top: .4rem;
-    z-index: -1;
-}
-
-
-.illustrations {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 2rem 2rem;
-    border: 3px solid green;
-    
-}
-.snail {
-    
-    width: 3.4rem;
-    height: 3.8rem;
-    
-}
-
-.snail-trail {
-    width: 3rem;
-    height: 1rem;
-    
-    z-index: -1;
-}
-
-.leaf {
-    
-    max-width: 1rem;
-    max-height: 2rem;
-    
-    transform: rotate(20deg);
-}
-
-.flower {
-   
-    width: 2.5rem;
-
-}
-
-.tiny-flower {
-    
-    width: .8rem;
-    height: 2rem;
-    
-
-}
-
-.tiny-flowers {
-    
-    width: 1rem;
-    height: 1rem;
-    
-    transform: rotate(5deg);
-}
-
-.sunflower {
-    
-    width: 1.5rem;
-    height: 1.5rem;
-    
-}
-
-.big-leaf {
-    
-    width: 4rem;
-    height: 6rem;
-    
-}
-
-.tiny-flower2 {
-    
-    width: .7rem;
-    
-    transform: rotate(37deg);
-}
-
-.tiny-flowers2 {
-    
-    width: 2rem;
-
-    transform: rotate(-57deg);
-} 
-}

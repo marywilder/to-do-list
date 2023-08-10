@@ -2,15 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from 'uuid';
 import './style.css';
-import paper from './paper.png';
-import snail from './snail.png';
-import leaf from './leaf.png';
-import snailtrail from './snailtrail-.png';
-import sunflower from './sunflower.png';
-import tinyflowers from './Tinyflowers.png';
-import tinyflower from './tinyflower.png';
-import bigleaf from './bigleaf-.png';
-import flower from './Flower.png';
 
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
@@ -51,39 +42,40 @@ function App() {
 
   return (
     <body className="body">
-      <h1>TO-DO</h1>
-      <div className="flex-todos">
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      </div>
+
+      <div className="pencil-image"></div>
     
-      <div className="buttons">
+      <section className="list-section">
+        
+        <h1>TO-DO</h1>
+
+        <div className="flex-todos">
+
+        <TodoList todos={todos} toggleTodo={toggleTodo} />
+
+        </div>
+      </section>
+
+      <section className="buttons">
   
         <div className="input-and-add">
-          <input ref={todoNameRef} type="text"className="todo-input" />
+
+          <input ref={todoNameRef} type="text"className="todo-input" placeholder="write your list here"/>
       
           <button onClick={handleAddTodo} className="add">add to-do</button>
+
         </div>
+
         <div className="left-and-clear">
-          <div className="left">{todos.filter(todo => !todo.complete).length} left to-do</div>
+
+          <div className="left">{todos.filter(todo => !todo.complete).length} left <br/>to-do</div>
+
           <button onClick={handleClearTodos} className="clear">clear completed to-dos</button>
+
         </div>
-      </div>
-      <img src={paper} className="paper"/>
 
-      <div className="illustrations">
-
-        <img src={snail} className="snail" />
-        <img src={leaf}  className="leaf" />
-        <img src={flower} className="flower" />
-        <img src={snailtrail} className="snail-trail" />
-        <img src={tinyflower} className="tiny-flower" />
-        <img src={tinyflowers} className="tiny-flowers" />
-        <img src={sunflower} className="sunflower" />
-        <img src={bigleaf} className="big-leaf" />
-        <img src={tinyflower} className="tiny-flower2" />
-        <img src={tinyflowers} className="tiny-flowers2" />
-      </div>
-
+      </section>
+      
     </body>
   )
 }
