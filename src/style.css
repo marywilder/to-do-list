@@ -34,13 +34,14 @@ body {
 
 .pencil-image {
     position: fixed;
-    width: 14rem;
-    height: 22rem;
+    width: 8rem;
+    height: 14rem;
     background-image: url(./pencil.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    transform: translate(-9.5rem, 15.8rem);
+    background-size: cover;
+    transform: translate(-12.4rem, 11.5rem);
     z-index: 4;
+    
 }
 
 .list-section {
@@ -85,7 +86,7 @@ h1 {
     align-items: flex-start;
     z-index: 2;
     flex-flow: column;
-    
+    transform: translateY(-2rem);
     
 }
 
@@ -98,30 +99,40 @@ h1 {
     
 }
 
-.todo-input {
+input.todo-input {
     font-family: 'Mansalva', cursive;
-    background-color: rgb(255, 255, 255, .0);
+    border: none;
     background-image: url(./input.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position:right;
+    overflow: visible;
     font-size: 1rem;
-    border: none;
-    width: 10rem;
-    height: 3rem;
-    text-align: center;
+    width: 8rem;
+    height: 4rem;
+    padding: 1rem 1rem 0 1rem;
     filter: none;
-    margin-right: 1rem;
     transition: filter 1s linear;
     color: var(--deep-green);
     outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    
+    z-index: 5;
 }
 
+
+
+ .todo-input:focus {
+
+    color:#c3b150;
+}
+
+
 .todo-input:hover {
-    filter:hue-rotate(40deg);
     text-decoration: none;
     outline: none;
-    height: 3rem;
+    color:#a1690e;
+    
     
 }
 
@@ -227,7 +238,8 @@ body {
 
 .pencil-image {
     height: 10rem;
-    transform: translate(-7.1rem, 11.1rem);
+    width: 5.6rem;
+    transform: translate(-11.4rem, 10.1rem);
 }
  
 .list-section {
